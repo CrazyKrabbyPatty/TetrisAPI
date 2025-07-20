@@ -1,14 +1,14 @@
 from setuptools import setup, Extension
 
 tetris_module = Extension(
-    'tetrisapi',
+    'TetrisAPI',
     sources=['TetrisAPI.cpp'],
-    extra_compile_args=['-std=c++17'],
+    extra_compile_args=['/std:c++17'],  # для MSVC компилятора
     language='c++'
 )
 
 setup(
-    name='tetrisapi',
+    name='TetrisAPI',
     version='1.0',
     description='Tetris API Python C Extension',
     ext_modules=[tetris_module],

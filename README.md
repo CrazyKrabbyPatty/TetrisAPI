@@ -4,4 +4,6 @@
 3. Выполнить последовательно:
     - python setup.py build
     - python setup.py install
+    - ИЛИ
+    - pip install .
 4. Всё готово!
