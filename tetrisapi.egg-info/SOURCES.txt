@@ -1,0 +1,6 @@
+TetrisAPI.cpp
+setup.py
+tetrisapi.egg-info/PKG-INFO
+tetrisapi.egg-info/SOURCES.txt
+tetrisapi.egg-info/dependency_links.txt
+tetrisapi.egg-info/top_level.txt
