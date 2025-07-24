@@ -1,11 +1,7 @@
-#include <Python.h>
+#include "TetrisAPI.h"
 #include <random>
 #include <algorithm>
 #include <array>
-
-enum class TETROMINO {
-    I, O, T, S, Z, J, L, COUNT
-};
 
 const std::array<std::array<unsigned char, 3>, static_cast<size_t>(TETROMINO::COUNT)> COLORS = {{
     {0, 255, 255},  // I
@@ -17,7 +13,7 @@ const std::array<std::array<unsigned char, 3>, static_cast<size_t>(TETROMINO::CO
     {255, 165, 0}   // L
 }};
 
-static PyObject* py_generate7bag(PyObject*, PyObject* args) {
+PyObject* py_generate7bag(PyObject*, PyObject* args) {
     int size;
     if (!PyArg_ParseTuple(args, "i", &size)) {
         return nullptr;
@@ -44,7 +40,7 @@ static PyObject* py_generate7bag(PyObject*, PyObject* args) {
     return list;
 }
 
-static PyObject* py_get_colors(PyObject*, PyObject* args) {
+PyObject* py_get_colors(PyObject*, PyObject* args) {
     int tetromino_int;
     if (!PyArg_ParseTuple(args, "i", &tetromino_int)) {
         return nullptr;
